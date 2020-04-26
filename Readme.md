@@ -1,5 +1,9 @@
 # Dranca: Branca library for D projects
 
+Branca library writed in d with lib sodium
+
+[![GitHub license](https://img.shields.io/badge/license-EUPL-blue.svg)](https://raw.githubusercontent.com/herotc/hero-rotation/master/LICENSE)
+
 ## Requirement
 
 Compile libsodium with buildsodium.sh</br>
