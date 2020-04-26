@@ -1,0 +1,25 @@
+{
+	"authors": [
+		"barrek"
+	],
+	"desactived-license": "ISC license",
+	"homepage": "https://github.com/carblue/sodium",
+	"copyright": "Copyright © 2017-, Carsten Blüggel",
+	"description": "bind libsodium",
+	"name": "sodium",
+	"configurations": [
+		{
+			"name": "library-source",
+			"targetType": "sourceLibrary"
+		},
+		{
+			"name": "library-static",
+			"targetType": "staticLibrary"
+		},
+		{
+			"name": "library-dynamic",
+			"targetType": "dynamicLibrary"
+		}
+	]
+
+}

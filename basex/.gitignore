@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/basex
+basex.so
+basex.dylib
+basex.dll
+basex.a
+basex.lib
+basex-test-*
+*.exe
+*.o
+*.obj
+*.lst

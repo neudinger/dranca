@@ -1,0 +1,52 @@
+{
+	"authors": [
+		"barrek",
+		"neudinger"
+	],
+	"info" : " dub --config",
+	"homepage": "http://github.com/neudinger/dranca",
+	"targetType": "library",
+	"copyright": "Copyright © 2020, barrek",
+	"description": "branca library",
+	"license": "EUPL-1.2",
+	"name": "dranca",
+	"configurations": [
+		{
+			"name": "dranca",
+			"disable-preGenerateCommands-posix":   [ "./buildsodium.sh"  ],
+			"targetType": "library",
+			"lflags-posix" : ["-L-lsodium", "--enable-new-dtags", "-rpath=./lib/usr/local/lib", "-L./lib/usr/local/lib" ],
+			"disable-dflags-dmd": ["-vtls"],
+			"disable-buildOptions": ["unittests"],
+			"libs-posix": [
+				"sodium"
+			]
+        },
+		{
+			"desactived-targetPath": "bin",
+			"name": "application",
+			"targetType": "executable",
+			"disable-mainSourceFile": "source/example",
+			"tmp-dflags-dmd": ["-cov"],
+			"tmp-buildOptions": ["unittests"],
+			"lflags-posix" : ["-L-lsodium", "--enable-new-dtags", "-rpath=./lib/usr/local/lib", "-L./lib/usr/local/lib" ],
+			"desactived-dflags-dmd": ["-vtls"],
+			"libs-posix": [
+				"sodium"
+			]
+		}
+	],
+	"subPackages": [
+		"./basex/",
+		"./sodium/"
+	],
+	"dependencies": {
+		"dranca:basex": "*",
+		"dranca:sodium": "*"
+	},
+	"sourcePaths": [
+		"./basex/",
+		"./sodium/",
+		"./source"
+	]
+}
