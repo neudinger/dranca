@@ -40,7 +40,7 @@ This project is licensed under the European Union Public License 1.2 see the :eu
 
 ## Future work
 
-- [ ] rewite aead_xchacha20poly1305 in D
+- [ ] rewrite aead_xchacha20poly1305 in D
 - [ ] Rewrite basex  with @nogc
 
 ## Other tools used and library
